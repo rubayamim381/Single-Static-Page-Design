@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="dict/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Back to top and top to back button -->
+    <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+        class="!fixed hidden z-10 bottom-5 end-5 rounded-full bg-white border border-solid border-sky-800 p-4 text-sm sm:text-sm text-sky-800 shadow-md transition duration-150 ease-in-out hover:bg-sky-800 hover:text-white hover:shadow-lg focus:text-white focus:bg-sky-800 focus:shadow-lg focus:outline-none focus:ring-0"
+        id="scroll-btn">
+        <span class="[&>svg]:w-4">
+            <svg id="rotate-btn" class="rotate2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="3" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </span>
+    </button>
+
+    <!-- hero section -->
+    <section id="header" class="hero md:p-4">
+        <div class="relative h-screen w-full">
+            <div class="absolute inset-0 bg-primary py-6"></div>
+
+            <!-- nav -->
+            <nav class="navbar absolute w-full py-4 px-2">
+                <div class="bg relative z-10">
+                    <div class="flex w-full flex-nowrap items-center justify-between gap-3 px-2.5 py-4">
+                        <div class="ms-2">
+                            <a id="logo" class="w-full" href="#">
+                                <img src="./images/white-logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <div class="flex flex-row gap-x-3 me-4">
+                            <button type="button"
+                                class="hidden sm:block inline-block rounded-full p-2 bg-transparent border border-solid border-white text-white hover:text-black hover:bg-white focus:text-black focus:bg-white nav-drop-shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                                </svg>
+                            </button>
+
+                            <button type="button"
+                                class="hidden sm:block inline-block rounded-full p-2 bg-transparent border border-solid border-white text-white text-sm hover:text-black hover:bg-white focus:text-black focus:bg-white nav-drop-shadow">
+                                Download the 2024 Report
+                            </button>
+
+                            <button type="button" id="top-nav-toogle"
+                                class="top-nav-toogle inline-block bg-transparent">
+                                <img src="./images/menu-bar-white.svg" class="size-6" alt="icon bars">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="top-right-side-navbar navbar-hidden absolute top-0 right-0 bg-white rounded-xl pb-6 pt-12 sm:pt-16 px-3 sm:px-8 mt-1 m-2 w-68 sm:w-80">
+                        <ul class="nav-list header-font text-base sm:text-md text-black leading-10">
+                            <li><a href="#!">The WPPOOL Index</a></li>
+                            <li><a href="#!">All Companies</a></li>
+                            <li><a href="#!">Potential Future Listings</a></li>
+                            <li><a href="#!">State of USA</a></li>
+                            <li><a href="#!">Stories & Ideas</a></li>
+                            <li><a href="#!">About WPPOOL</a></li>
+                            <li><a href="#!">WPPOOL Portfolio Companies</a></li>
+                            <li><a href="#!" class="text-sky-800">Visit WPPOOL</a></li>
+                        </ul>
+                        <div class="flex flex-row gap-2">
+                            <button type="button"
+                                class="block sm:hidden inline-block rounded-full p-2 text-white bg-lime-500 nav-drop-shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                                </svg>
+                            </button>
+
+                            <button type="button"
+                                class="block sm:hidden inline-block rounded-full p-2 text-white text-sm nav-bg-blue nav-drop-shadow">
+                                Download the 2024 Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="w-full h-screen brightness-50">
+                <img class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" src="./images/dot.svg"
+                    alt="dot svg" />
+            </div>
+            <img class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" src="./images/rect.svg"
+                alt="rect svg" />
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 w-full text-center px-4">
+                <div class="hero_header capitalize text-white font-normal text-5xl md:text-5xl lg:text-7xl mb-2">The
+                    WPPOOL
+                    Index
+                </div>
+                <div
+                    class="hero_text text-white font-normal-350 text-lg lg:text-md sm:text-xl md:w-3/5 lg:w-4/5 mx-auto">
+                    Monitor the
+                    performance of emerging,
+                    publicly
+                    traded, financial technology companies
+                </div>
+            </div>
+
+            <div class="hero_left_side px-4">
+                <div class="hero_left_side_flex gap-3 md:gap-12">
+                    <div>
+                        <div class="hero_header capitalize text-white font-thin text-xl md:text-3xl">60</div>
+                        <div class="hero_text text-color-50 font-thin text-xs sm:text-sm md:text-base">Companies</div>
+                    </div>
+                    <div>
+                        <div class="hero_header capitalize text-white font-thin text-xl md:text-3xl">$100B</div>
+                        <div class="hero_text text-color-50 font-thin text-xs sm:text-sm md:text-base">Market cap</div>
+                    </div>
+                    <div>
+                        <div class="hero_header capitalize text-white font-thin text-xl md:text-3xl">3.5x</div>
+                        <div class="hero_text text-color-50 font-thin text-xs sm:text-sm md:text-base">Revenue multiple
+                        </div>
+                    </div>
+                    <div>
+                        <div class="hero_header capitalize text-white font-thin text-xl md:text-3xl">60%</div>
+                        <div class="hero_text text-color-50 font-thin text-xs sm:text-sm md:text-base">LTM avg. revenue
+                            growth
+                            rate
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pills navigation -->
+    <section class="chart-section m-2 sm:my-4 md:mx-4 md:my-8 lg:my-10">
+        <div class="bg-white p-2 md:p-4">
+            <!-- nav-2 -->
+            <nav class="mid-navbar w-full pb-4 px-2">
+                <div class="fixed-nav-bg rounded-xl drop-shadow-md bg relative z-10">
+                    <div class="flex w-full flex-nowrap items-center justify-between gap-3 px-2.5 py-4">
+                        <div class="ms-2 relative -z-10">
+                            <a id="logo" class="w-full" href="#">
+                                <img src="./images/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="flex flex-row gap-x-3 me-4">
+                            <button type="button"
+                                class="nav-btns hidden sm:block inline-block rounded-full p-2 border border-solid border-lime-500 text-lime-500 hover:bg-lime-500 hover:text-white focus:bg-lime-500 focus:text-white nav-drop-shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                                </svg>
+                            </button>
+
+                            <button type="button"
+                                class="nav-btns hidden sm:block inline-block rounded-full p-2 text-sm text-black nav-border-blue nav-blue nav-drop-shadow">
+                                Download the 2024 Report
+                            </button>
+
+                            <button type="button" id="mid-nav-toogle"
+                                class="mid-nav-toogle inline-block bg-transparent">
+                                <img src="./images/menu-black.svg" class="size-6" alt="icon bars">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="mid-right-side-navbar navbar-hidden absolute top-0 right-0 bg-white rounded-xl pb-6 pt-12 sm:pt-16 px-3 sm:px-8 mt-1 m-2 w-68 sm:w-80">
+                        <ul class="nav-list header-font text-base sm:text-md text-black leading-10">
+                            <li><a href="#!">The WPPOOL Index</a></li>
+                            <li><a href="#!">All Companies</a></li>
+                            <li><a href="#!">Potential Future Listings</a></li>
+                            <li><a href="#!">State of USA</a></li>
+                            <li><a href="#!">Stories & Ideas</a></li>
+                            <li><a href="#!">About WPPOOL</a></li>
+                            <li><a href="#!">WPPOOL Portfolio Companies</a></li>
+                            <li><a href="#!" class="text-sky-800">Visit WPPOOL</a></li>
+                        </ul>
+                        <div class="flex flex-row gap-2">
+                            <button type="button"
+                                class="block sm:hidden inline-block rounded-full p-2 text-white bg-lime-500 nav-drop-shadow">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                                </svg>
+                            </button>
+
+                            <button type="button"
+                                class="block sm:hidden inline-block rounded-full p-2 text-white text-sm nav-bg-blue nav-drop-shadow">
+                                Download the 2024 Report
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!--side pills navigation-->
+            <div class="md:flex items-stretch">
+                <!--Pills navigation-->
+                <div class="sm:basis-1/4 lg:basis-1/5 p-2  md:me-4 right-nav-bg rounded-2xl">
+                    <ul class="flex flex-row md:flex-col flex-wrap gap-2 list-none" role="tablist" data-twe-nav-ref>
+                        <li role="index 1" class="flex-grow">
+                            <a href="#pills-index01"
+                                class="chart-section-index mb-2 block rounded-md ps-4 pe-5 py-2 header-font text-base capitalize leading-tight data-[twe-nav-active]:!bg-blue-600 data-[twe-nav-active]:text-white"
+                                id="pills-index-tab01" data-twe-toggle="pill" data-twe-target="#pills-index01"
+                                data-twe-nav-active role="tab" aria-controls="pills-index01" aria-selected="true">The
+                                Index Tab one <span class="active plusminus"></span></a>
+                        </li>
+                        <li role="index 2" class="flex-grow">
+                            <a href="#pills-index02"
+                                class="chart-section-index mb-2 block rounded-md ps-4 pe-5 py-2 header-font text-base capitalize leading-tight data-[twe-nav-active]:!bg-blue-600 data-[twe-nav-active]:text-white"
+                                id="pills-index-tab02" data-twe-toggle="pill" data-twe-target="#pills-index02"
+                                role="tab" aria-controls="pills-index02" aria-selected="false">The Index Tab two
+                                <span class="plusminus">+</span></a>
+                        </li>
+                        <li role="index 3" class="flex-grow">
+                            <a href="#pills-index03"
+                                class="chart-section-index mb-2 block rounded-md ps-4 pe-5 py-2 header-font text-base capitalize leading-tight data-[twe-nav-active]:!bg-blue-600 data-[twe-nav-active]:text-white"
+                                id="pills-index-tab03" data-twe-toggle="pill" data-twe-target="#pills-index03"
+                                role="tab" aria-controls="pills-index03" aria-selected="false">The Index Tab three
+                                <span class="plusminus">+</span></a>
+                        </li>
+                        <li role="index 4" class="flex-grow">
+                            <a href="#pills-index04"
+                                class="chart-section-index mb-2 block rounded-md ps-4 pe-5 py-2 header-font text-base capitalize leading-tight data-[twe-nav-active]:!bg-blue-600 data-[twe-nav-active]:text-white"
+                                id="pills-index-tab04" data-twe-toggle="pill" data-twe-target="#pills-index04"
+                                role="tab" aria-controls="pills-index04" aria-selected="false">The Index Tab four
+                                <span class="plusminus">+</span></a>
+                        </li>
+                        <li role="index 5" class="flex-grow">
+                            <a href="#pills-index05"
+                                class="chart-section-index mb-2 block rounded-md ps-4 pe-5 py-2 header-font text-base capitalize leading-tight data-[twe-nav-active]:!bg-blue-600 data-[twe-nav-active]:text-white"
+                                id="pills-index-tab05" data-twe-toggle="pill" data-twe-target="#pills-index05"
+                                role="tab" aria-controls="pills-index05" aria-selected="false">The Index Tab five
+                                <span class="plusminus">+</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Pills content-->
+                <div class="sm:basis-3/4 lg:basis-4/5 pills-index hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block my-4 px-1 md:px-2"
+                    id="pills-index01" role="tabpanel" aria-labelledby="pills-index-tab01" data-twe-tab-active>
+                    <!-- wppool index -->
+                    <div class="flex flex-row gap-1.5 w-full">
+                        <img src="./images/rect-small-black.png" class="w-8 md:w-12" alt="">
+                        <div class="text-2xl md:text-4xl header-font text-black capitalize">
+                            The WPPOOL Index
+                        </div>
+                    </div>
+
+                    <!-- index percentage -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 sm:gap-4 my-4">
+                        <div class="flex rounded-md bg-gray-100 p-2">
+                            <div
+                                class="flex items-center flex-initial w-64 grow text-md sm:text-xl lg:text-3xl header-font text-orange-400">
+                                +66.2%
+                            </div>
+                            <div
+                                class="flex items-center flex-initial pe-1 md:pe-2 grow-0 text-xs lg:text-sm body-text text-dark capitalize border-r-4 border-r-orange-400">
+                                WPPOOL Index
+                            </div>
+                        </div>
+                        <div class="flex rounded-md bg-gray-100 p-2">
+                            <div
+                                class="flex items-center flex-initial w-64 grow text-md sm:text-xl lg:text-3xl header-font text-indigo-500">
+                                +26.6%
+                            </div>
+                            <div
+                                class="flex items-center flex-initial pe-1 md:pe-2 grow-0 text-xs lg:text-sm body-text text-dark capitalize border-r-4 border-r-indigo-500">
+                                Google Index
+                            </div>
+                        </div>
+                        <div class="flex rounded-md bg-gray-100 p-2">
+                            <div
+                                class="flex items-center flex-initial w-64 grow text-md sm:text-xl lg:text-3xl header-font text-lime-500">
+                                +34.1%
+                            </div>
+                            <div
+                                class="flex items-center flex-initial pe-1 md:pe-2 grow-0 text-xs lg:text-sm body-text text-dark capitalize border-r-4 border-r-lime-500">
+                                Microsoft
+                            </div>
+                        </div>
+                        <div class="flex rounded-md bg-gray-100 p-2">
+                            <div
+                                class="flex items-center flex-initial w-64 grow text-md sm:text-xl lg:text-3xl header-font text-fuchsia-800">
+                                +17%
+                            </div>
+                            <div
+                                class="flex items-center flex-initial pe-1 md:pe-2 grow-0 text-xs lg:text-sm body-text text-dark capitalize border-r-4 border-r-fuchsia-800">
+                                twitter Index
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- sectors dropdown -->
+                    <div class="grid grid-col-6 items-center gap-4 my-4">
+                        <div class="col-span-1 col-start-1">
+                            <div class="relative" data-twe-dropdown-ref>
+                                <a class="flex items-center justify-between rounded-full !min-w-4 nav-bg-blue px-3 py-1.5 text-md font-normal body-text text-white capitalize nav-item-shadow transition duration-150 ease-in-out motion-reduce:transition-none"
+                                    href="#" type="button" id="dropdownMenuButton1" data-twe-dropdown-toggle-ref
+                                    aria-expanded="false" data-twe-ripple-init data-twe-ripple-color="light">
+                                    Sectors
+                                    <span class="ms-2 [&>svg]:h-5 [&>svg]:w-5">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <rect x="0" fill="none" width="24" height="24"></rect>
+                                                <g>
+                                                    <path d="M7 10l5 5 5-5"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="absolute w-full z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                                    aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
+                                    <li>
+                                        <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                            href="#" data-twe-dropdown-item-ref>Sectors 1</a>
+                                    </li>
+                                    <li>
+                                        <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                            href="#" data-twe-dropdown-item-ref>Sectors 2</a>
+                                    </li>
+                                    <li>
+                                        <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                            href="#" data-twe-dropdown-item-ref>Sectors 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-1 col-start-2">
+                            <div class="relative" data-twe-dropdown-ref>
+                                <a class="flex items-center justify-between rounded-full !min-w-4 nav-bg-blue px-3 py-1.5 text-md font-normal body-text text-white capitalize nav-item-shadow transition duration-150 ease-in-out motion-reduce:transition-none"
+                                    href="#" type="button" id="dropdownMenuButton2" data-twe-dropdown-toggle-ref
+                                    aria-expanded="false" data-twe-ripple-init data-twe-ripple-color="light">
+                                    types of IPO
+                                    <span class="ms-2 [&>svg]:h-5 [&>svg]:w-5">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <rect x="0" fill="none" width="24" height="24"></rect>
+                                                <g>
+                                                    <path d="M7 10l5 5 5-5"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <ul class="absolute z-[1000] w-full float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                                    aria-labelledby="dropdownMenuButton2" data-twe-dropdown-menu-ref>
+                                    <li>
+                                        <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                            href="#" data-twe-dropdown-item-ref>IPO 1</a>
+                                    </li>
+                                    <li>
+                                        <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                            href="#" data-twe-dropdown-item-ref>IPO 2</a>
+                                    </li>
+                                    <li>
+                                        <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                            href="#" data-twe-dropdown-item-ref>IPO 3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-span-full col-start-3 lg:col-span-3 md:col-end-7 lg:col-span-2 lg:col-end-7">
+                            <div class="segmented-control">
+                                <input type="radio" name="segment" id="one-year" checked>
+                                <label for="one-year">1Y</label>
+
+                                <input type="radio" name="segment" id="ytd">
+                                <label for="ytd">YTD</label>
+
+                                <input type="radio" name="segment" id="six-months">
+                                <label for="six-months">6M</label>
+
+                                <input type="radio" name="segment" id="one-month">
+                                <label for="one-month">1M</label>
+
+                                <input type="radio" name="segment" id="one-week">
+                                <label for="one-week">1W</label>
+
+                                <div class="indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- line chart -->
+                    <div class="chart" id="chart">
+                    </div>
+                </div>
+
+                <div class="pills-index hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block my-4 mx-1 md:mx-6"
+                    id="pills-index02" role="tabpanel" aria-labelledby="pills-index-tab02">
+                    Tab 2 content vertical
+                </div>
+
+                <div class="pills-index hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block my-4 mx-1 md:mx-6"
+                    id="pills-index03" role="tabpanel" aria-labelledby="pills-index-tab03">
+                    Tab 3 content vertical
+                </div>
+
+                <div class="pills-index hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block my-4 mx-1 md:mx-6"
+                    id="pills-index04" role="tabpanel" aria-labelledby="pills-index-tab04">
+                    Tab 4 content vertical
+                </div>
+
+                <div class="pills-index hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block my-4 mx-1 md:mx-6"
+                    id="pills-index05" role="tabpanel" aria-labelledby="pills-index-tab05">
+                    Tab 5 content vertical
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- table section -->
+    <section class="table-section m-2 sm:my-4 md:mx-4 md:my-8 lg:my-10">
+        <div class="bg-white p-2 md:p-4 rounded-xl mb-10">
+            <!-- all companies -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4 mx-2 md:mx-4">
+                <div class="header-font text-black text-4xl capitalize">
+                    all companies
+                </div>
+                <div class="flex sm:justify-end items-center">
+                    <div class="relative block w-10/12 sm:w-4/5 lg:w-3/5">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-5">
+                            <svg class="w-4 h-4 text-black dark:text-gray-400" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                        </span>
+                        <input
+                            class="placeholder:text-black header-font block bg-slate-200 w-full border border-slate-300 rounded-md py-2 pl-12 pr-3 shadow-lg focus:outline-none focus:border-primary focus:ring-sky-500 focus:ring-1 sm:text-base transition duration-200 ease-in-out"
+                            placeholder="Search Companies" type="text" name="search" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- table -->
+            <div class="table-container mt-10">
+                <table class="table scrollable">
+                    <thead>
+                        <tr>
+                            <th>country</th>
+                            <th>ticker</th>
+                            <th>vertical</th>
+                            <th>price</th>
+                            <th>Market Cap ($B)</th>
+                            <th>revenue growth</th>
+                            <th>gross margin</th>
+                            <th>EV/Revenue</th>
+                            <th>YTD/Performance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Seoul</td>
+                        <td>South Korea</td>
+                        <td>10,231,000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>São Paulo</td>
+                        <td>Brazil</td>
+                        <td>10,009,000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bombay</td>
+                        <td>India</td>
+                        <td>9,925,000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Jakarta</td>
+                        <td>Indonesia</td>
+                        <td>9,373,000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Karachi</td>
+                        <td>Pakistan</td>
+                        <td>9,339,000</td>
+                    </tr> -->
+                </table>
+            </div>
+
+        </div>
+        <!-- two buttons -->
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                class=" inline-block rounded-full nav-bg-blue px-6 pb-2 pt-2.5 text-sm body-text font-medium capitalize leading-normal text-white nav-drop-shadow transition duration-150 ease-in-out motion-reduce:transition-none">
+                Download 'All Companies' Data
+            </button>
+            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                class=" inline-block rounded-full nav-bg-blue px-6 pb-2 pt-2.5 text-sm font-medium body-text capitalize leading-normal text-white nav-drop-shadow transition duration-150 ease-in-out focus:shadow-primary-2 motion-reduce:transition-none">
+                View Methodology
+            </button>
+        </div>
+    </section>
+
+    <!-- listings -->
+    <section class="listing-section my-16 mx-4 md:mx-8 md:my-32">
+        <div class="px-2 mx-auto sm:w-11/12 md:w-10/12">
+            <div class="header-font text-black capitalize text-3xl md:text-5xl mb-4">Potential Future Listings</div>
+            <div class="body-text text-sm md:text-base par-text-color font-normal-350 mb-8">Lorem ipsum dolor sit amet
+                consectetur
+                adipisicing elit. Quia ex
+                temporibus sunt reprehenderit dolor et ducimus aperiam, necessitatibus quos ad labore debitis illum? Sit
+                dolorum vel rem deleniti impedit harum?</div>
+
+            <!-- grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 219.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 220.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-4 rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 221.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 222.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 223.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 224.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 225.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 226.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group 227.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div class="p-7 h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/listing-logo/Group.png" class="w-full h-14 object-contain" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto lg:w-10/12">
+
+        <!-- state -->
+        <section class="state-slider my-16 mx-4 md:mx-8 md:my-32">
+            <div class="state-slider-right">
+                <img src="./images/Group 364.png" class="w-full" alt="">
+            </div>
+            <div class="px-2">
+                <div class="header-font text-black text-3xl md:text-5xl mb-2">State of USA</div>
+                <div class="relative w-28 mb-3" data-twe-dropdown-ref>
+                    <button
+                        class="flex items-center justify-between rounded-full w-full !min-w-4 nav-bg-blue nav-item-shadow-active px-2.5 py-2 header-font text-xl sm:text-2xl text-white capitalize transition duration-150 ease-in-out motion-reduce:transition-none"
+                        href="#" type="button" id="dropdownMenuButton3" data-twe-dropdown-toggle-ref
+                        aria-expanded="false" data-twe-ripple-init data-twe-ripple-color="light">
+                        2024
+                        <span class="ms-2 [&>svg]:h-5 [&>svg]:w-5">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <rect x="0" fill="none" width="24" height="24"></rect>
+                                    <g>
+                                        <path d="M7 10l5 5 5-5"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+                    <ul class="absolute z-[1000] float-left m-0 hidden w-full min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                        aria-labelledby="dropdownMenuButton2" data-twe-dropdown-menu-ref>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                href="#" data-twe-dropdown-item-ref>2024-1</a>
+                        </li>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                href="#" data-twe-dropdown-item-ref>2024-2</a>
+                        </li>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                                href="#" data-twe-dropdown-item-ref>2024-3</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="body-text text-black text-base font-normal-350 mb-3">
+                    Click through the slides or download the report to view natively on your device.
+                </div>
+                <div class="swiper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/state/state1.png" class="w-full rounded-md" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/state/state2.png" class="w-full rounded-md" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/state/state1.png" class="w-full rounded-md" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/state/state2.png" class="w-full rounded-md" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/state/state1.png" class="w-full rounded-md" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/state/state2.png" class="w-full rounded-md" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/state/state1.png" class="w-full rounded-md" alt="">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap justify-between my-4 ms-2 sm:ms-4 gap-3 sm:gap-4">
+                            <div class="flex flex-wrap content-start gap-3">
+
+                                <div id="js-prev1" data-twe-ripple-init data-twe-ripple-color="light"
+                                    class="swiper-prev rounded-full bg-white p-3 sm:p-4 text-sky-800 shadow-lg hover:drop-shadow-xl transition duration-150 ease-in-out hover:bg-sky-800 hover:text-white focus:text-white focus:bg-sky-800 focus:shadow-lg focus:outline-none focus:ring-0">
+                                    <span class="block [&>svg]:w-3 sm:[&>svg]:w-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div id="js-next1" data-twe-ripple-init data-twe-ripple-color="light"
+                                    class="swiper-next rounded-full bg-white p-3 sm:p-4 text-sky-800 shadow-lg hover:drop-shadow-xl transition duration-150 ease-in-out hover:bg-sky-800 hover:text-white focus:text-white focus:bg-sky-800 focus:shadow-lg focus:outline-none focus:ring-0">
+                                    <span class="block [&>svg]:w-3 sm:[&>svg]:w-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="pages-dropdown inline-flex gap-2 items-center"><span>Pages</span>
+                                    <span>
+                                        <div class="relative w-28" data-twe-dropdown-ref>
+                                            <select id="select-page"
+                                                class="select-page rounded-full w-full bg-white px-3 py-2 sm:p-4 text-black shadow-lg">
+                                            </select>
+                                        </div>
+                                    </span>
+                                    <span>of <span id="total-slide"></span> </span>
+                                </div>
+                            </div>
+                            <button type="button"
+                                class="rounded-full py-2 px-5 me-2 nav-bg-blue text-white nav-item-shadow-active">
+                                Download the 2023 Report
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- stories -->
+        <section class="grid-img-section my-16 mx-4 md:mx-8 md:my-32">
+            <div class="px-2">
+                <div class="header-font text-black capitalize text-3xl md:text-5xl mb-2">Stories & Ideas</div>
+                <div class="body-text text-sm md:text-xl font-normal-350 par-text-color mb-8">The latest news and
+                    updates
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-12">
+                    <div class="grid-bg">
+                        <img src="./images/profile/image 99.png" class="w-3/5 lg:w-1/2" alt="">
+                        <div class="px-4">
+                            <div class="header-font text-lg !text-primary mb-2">
+                                By: Sahabuddin Sagor
+                            </div>
+                            <div class="header-font text-md text-black mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                                class="mb-4 inline-block rounded-full nav-bg-blue px-4 py-1.5 text-sm body-text font-medium capitalize leading-normal text-white nav-item-shadow transition duration-150 ease-in-out motion-reduce:transition-none">
+                                read more
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid-bg">
+                        <img src="./images/profile/image 98.png" class="w-3/5 lg:w-1/2" alt="">
+                        <div class="px-4">
+                            <div class="header-font text-lg !text-primary mb-2">
+                                By: Nayem Khan
+                            </div>
+                            <div class="header-font text-md text-black mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                                class="mb-4 inline-block rounded-full nav-bg-blue px-4 py-1.5 text-sm body-text font-medium capitalize leading-normal text-white nav-item-shadow transition duration-150 ease-in-out motion-reduce:transition-none">
+                                read more
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid-bg">
+                        <img src="./images/profile/image 99.png" class="w-3/5 lg:w-1/2" alt="">
+                        <div class="px-4">
+                            <div class="header-font text-lg !text-primary mb-2">
+                                By: Sahabuddin Sagor
+                            </div>
+                            <div class="header-font text-md text-black mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                                class="mb-4 inline-block rounded-full nav-bg-blue px-4 py-1.5 text-sm body-text font-medium capitalize leading-normal text-white nav-item-shadow transition duration-150 ease-in-out motion-reduce:transition-none">
+                                read more
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid-bg">
+                        <img src="./images/profile/image 98.png" class="w-3/5 lg:w-1/2" alt="">
+                        <div class="px-4">
+                            <div class="header-font text-lg !text-primary mb-2">
+                                By: Nayem Khan
+                            </div>
+                            <div class="header-font text-md text-black mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                                class="mb-4 inline-block rounded-full nav-bg-blue px-4 py-1.5 text-sm body-text font-medium capitalize leading-normal text-white nav-item-shadow transition duration-150 ease-in-out motion-reduce:transition-none">
+                                read more
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid-bg">
+                        <img src="./images/profile/image 99.png" class="w-3/5 lg:w-1/2" alt="">
+                        <div class="px-4">
+                            <div class="header-font text-lg !text-primary mb-2">
+                                By: Sahabuddin Sagor
+                            </div>
+                            <div class="header-font text-md text-black mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                                class="mb-4 inline-block rounded-full nav-bg-blue px-4 py-1.5 text-sm body-text font-medium capitalize leading-normal text-white nav-item-shadow transition duration-150 ease-in-out motion-reduce:transition-none">
+                                read more
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid-bg">
+                        <img src="./images/profile/image 98.png" class="w-3/5 lg:w-1/2" alt="">
+                        <div class="px-4">
+                            <div class="header-font text-lg !text-primary mb-2">
+                                By: Nayem Khan
+                            </div>
+                            <div class="header-font text-md text-black mb-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                                class="mb-4 inline-block rounded-full nav-bg-blue px-4 py-1.5 text-sm body-text font-medium capitalize leading-normal text-white nav-item-shadow transition duration-150 ease-in-out motion-reduce:transition-none">
+                                read more
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- line -->
+        <section class="line mx-4 md:mx-8">
+            <div class="px-2">
+                <div class="border-btm-color"></div>
+            </div>
+        </section>
+
+        <!-- about wppool -->
+        <section class="about-section my-16 mx-4 md:mx-8 md:my-32">
+            <div class="about-section-container bg-white rounded-lg">
+                <div class="about-left">
+                    <div class="py-4 h-full flex flex-col items-start justify-center">
+                        <div class="header-font text-black text-3xl md:text-5xl font-normal capitalize mb-2">
+                            about WPPOOL
+                        </div>
+                        <div class="header-font text-xl md:text-3xl text-color-50 font-normal capitalize mb-3">
+                            Investing in wppool for over 50 years
+                        </div>
+                        <div class="body-text text-sm sm:text-base par-text-color font-normal-350 capitalize my-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ducimus pariatur
+                            perferendis
+                            ad eaque ipsa dignissimos dolor alias, nostrum dolore modi, assumenda neque voluptate quod
+                            delectus nihil quisquam nemo? Suscipit?
+                        </div>
+                        <button type="button" data-twe-ripple-init data-twe-ripple-color="light"
+                            class=" inline-block rounded-full nav-bg-blue px-6 pb-2 pt-2.5 text-sm font-medium body-text capitalize leading-normal text-white nav-drop-shadow transition duration-150 ease-in-out focus:shadow-primary-2 motion-reduce:transition-none">
+                            contact WPPOOL
+                        </button>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <img src="./images/about-right-banner.svg" class="h-full" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- line -->
+        <section class="line mx-4 md:mx-8">
+            <div class="px-2">
+                <div class="border-btm-color"></div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- portfolio -->
+    <section class="listing-section my-16 mx-4 md:mx-8 md:my-32">
+        <div class="px-2 mx-auto sm:w-11/12 md:w-10/12">
+            <div class="header-font text-black capitalize text-3xl md:text-5xl mb-8">Selected WPPOOL Portfolio Companies
+            </div>
+
+            <!-- grid -->
+            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 sm:gap-4">
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img1.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img2.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img3.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img4.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img5.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img6.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img7.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img8.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img9.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img10.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img11.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img12.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img13.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img14.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img15.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img16.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img17.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img1.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img3.png" class="w-full h-14 object-contain" alt="">
+                </div>
+                <div
+                    class="p-2 sm:p-7 h-3/4 md:h-full rounded-md bg-white flex justify-center items-center hover:drop-shadow-md">
+                    <img src="./images/portfolio/img5.png" class="w-full h-14 object-contain" alt="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="footer_bg_color p-4 md:p-8 lg:px-16 lg:py-12">
+            <div class="grid grid-cols-5 gap-4">
+                <div class="col-span-full lg:col-span-3 md:col-span-2 sm:col-span-3">
+                    <div class="header-font text-black text-2xl md:text-3xl lg:text-4xl lg:w-8/12">
+                        Experience remarkable
+                        WordPress products with a
+                        new level of power, beauty,
+                        and human-centered designs.
+                    </div>
+                </div>
+                <div class="col-span-full lg:col-span-1 md:col-span-1 sm:col-span-2 sm:col-end-7">
+                    <div class="header-font text-xl font-light footer_copyright_color capitalize mb-4">
+                        jump to
+                    </div>
+                    <div class="footer-link grid gap-y-2 text-primary text-md font-normal capitalize">
+                        <a href="#">about us</a>
+                        <a href="#">portfolio</a>
+                        <a href="#">news</a>
+                        <a href="#">stories</a>
+                        <a href="#">jobs</a>
+                    </div>
+                </div>
+                <div class="col-span-full lg:col-span-1 md:col-span-2">
+                    <div class="flex flex-col">
+                        <div>
+                            <div
+                                class="header-font text-lg md:text-xl lg:text-2xl text-black font-bold capitalize mb-4">
+                                Cambridge
+                            </div>
+                            <div class="text-font text-base font-normal par-text-color capitalize">
+                                70728 Yost Burg, <br>
+                                North Magdaleneview, <br>
+                                UT 97952-2814
+                            </div>
+                            <div class="line-gray my-5"></div>
+                        </div>
+                        <div>
+                            <div
+                                class="header-font text-lg md:text-xl lg:text-2xl text-black font-bold capitalize mb-4">
+                                London
+                            </div>
+                            <div class="text-font text-base font-normal par-text-color capitalize">
+                                Suite 292 903 Stehr Streets, <br>
+                                Langworthtown, SC 94577-9465
+                            </div>
+                            <div class="line-gray my-5"></div>
+                        </div>
+                        <div>
+                            <div
+                                class="header-font text-lg md:text-xl lg:text-2xl text-black font-bold capitalize mb-4">
+                                San Francisco
+                            </div>
+                            <div class="text-font text-base font-normal par-text-color capitalize">
+                                19837 Gilberto Lodge, <br>
+                                Lake Kendallville, <br>
+                                Colorado - 97392, Bhutan
+                            </div>
+                            <div class="line-gray my-5"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- copyright -->
+                <div class="col-span-full sm:col-span-3">
+                    <div class="flex gap-x-4 body-text text-sm font-normal capitalize footer_copyright_color mb-4">
+                        <div>&copy
+                            <script>document.write(new Date().getFullYear())</script>
+                        </div>
+                        <a href="#">terms of use</a>
+                        <a href="#">privacy policy</a>
+                    </div>
+                    <div class="body-text text-sm font-normal capitalize text-black lg:w-8/12">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ipsam necessitatibus illo
+                        esse illum eius quidem quasi commodi dicta officiis at aliquam voluptate, ratione minus
+                        similique doloribus quibusdam distinctio non!
+                    </div>
+
+                </div>
+                <!-- social icon -->
+                <div class="col-span-full md:col-span-2 md:col-end-6 lg:col-end-7">
+                    <div class="footer-icon flex gap-x-2">
+                        <a href="#!">
+                            <svg fill="#7D7F81" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310 310" xml:space="preserve"
+                                stroke="#7D7F81">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g id="XMLID_801_">
+                                        <path id="XMLID_802_"
+                                            d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73 C77.16,101.969,74.922,99.73,72.16,99.73z">
+                                        </path>
+                                        <path id="XMLID_803_"
+                                            d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4 c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z">
+                                        </path>
+                                        <path id="XMLID_804_"
+                                            d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599 c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319 c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995 C310,145.43,300.549,94.761,230.454,94.761z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#!">
+                            <svg viewBox="0 -2 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#7D7F81">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>twitter [#7D7F81]</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs> </defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7521.000000)"
+                                            fill="#7D7F81">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path
+                                                    d="M10.29,7377 C17.837,7377 21.965,7370.84365 21.965,7365.50546 C21.965,7365.33021 21.965,7365.15595 21.953,7364.98267 C22.756,7364.41163 23.449,7363.70276 24,7362.8915 C23.252,7363.21837 22.457,7363.433 21.644,7363.52751 C22.5,7363.02244 23.141,7362.2289 23.448,7361.2926 C22.642,7361.76321 21.761,7362.095 20.842,7362.27321 C19.288,7360.64674 16.689,7360.56798 15.036,7362.09796 C13.971,7363.08447 13.518,7364.55538 13.849,7365.95835 C10.55,7365.79492 7.476,7364.261 5.392,7361.73762 C4.303,7363.58363 4.86,7365.94457 6.663,7367.12996 C6.01,7367.11125 5.371,7366.93797 4.8,7366.62489 L4.8,7366.67608 C4.801,7368.5989 6.178,7370.2549 8.092,7370.63591 C7.488,7370.79836 6.854,7370.82199 6.24,7370.70483 C6.777,7372.35099 8.318,7373.47829 10.073,7373.51078 C8.62,7374.63513 6.825,7375.24554 4.977,7375.24358 C4.651,7375.24259 4.325,7375.22388 4,7375.18549 C5.877,7376.37088 8.06,7377 10.29,7376.99705"
+                                                    id="twitter-[#7D7F81]"> </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!--------------------------------swiper slide------------------------------------>
+    <script>
+        const mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            initialSlide: 0,
+            centeredSlides: false,
+            spaceBetween: 30,
+            grabCursor: true,
+            autoHeight: false,
+            navigation: {
+                nextEl: '.swiper-next',
+                prevEl: '.swiper-prev',
+                clickable: true
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                }
+            }
+        })
+
+        const selectPage = document.getElementById('select-page');
+
+        const slides = document.querySelectorAll('.swiper-wrapper .swiper-slide');
+        const totalSlide = document.getElementById('total-slide');
+        let len = slides.length;
+
+        totalSlide.innerHTML = len;
+
+
+        // media queries for single slide selection
+        function mediaQueryFun(mediaQuery) {
+            if (mediaQuery.matches) {
+                slides.forEach((slide, index) => {
+                    const option = document.createElement('option');
+                    option.value = index;
+                    option.textContent = (index + 1);
+                    selectPage.appendChild(option);
+                });
+            } else {
+                slides.forEach((slide, index) => {
+                    if (index < len - 1) {
+                        const option = document.createElement('option');
+                        option.value = index;
+                        option.textContent = (index + 1) + " to " + (index + 2);
+                        selectPage.appendChild(option);
+                    }
+                });
+            }
+        }
+
+        var mediaQuery = window.matchMedia("(max-width: 639px)")
+
+        mediaQueryFun(mediaQuery);
+        mediaQuery.addEventListener("change", function () {
+            mediaQueryFun(mediaQuery);
+        });
+
+        selectPage.addEventListener('change', function () {
+            const selectedSlideIndex = parseInt(selectPage.value, 10);
+            mySwiper.slideTo(selectedSlideIndex);
+        });
+
+    </script>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
