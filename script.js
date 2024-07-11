@@ -174,10 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function generateWeightedRandom() {
     const random = Math.random();
-    if (random < 0.98) { // 80% chance
-        return Math.floor(Math.random() * 60) + 1; // 1 to 50
+    if (random < 0.98) {
+        return Math.floor(Math.random() * 60) + 1;
     } else {
-        return Math.floor(Math.random() * 40) + 60; // 51 to 100
+        return Math.floor(Math.random() * 40) + 60;
     }
 }
 
@@ -213,13 +213,6 @@ var options = {
         },
         toolbar: {
             show: false
-        },
-        events: {
-            dataPointMouseEnter: function (event) {
-                console.log('hi');
-                console.log(event.path[0]);
-                event.path[0].style.cursor = "pointer";
-            }
         }
     },
     series: seriesData,

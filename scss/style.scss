@@ -537,9 +537,36 @@ $table: (background-color: rgba(white, .75),
 
         }
 
+        &-img {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        &-img img {
+            border-radius: 6px;
+        }
+
+        &:nth-child(3) .grid-bg-img::before,
+        &:nth-child(6) .grid-bg-img::before {
+            width: 25%;
+            height: 8%;
+            padding: 8px;
+            content: "";
+            background-image: url("./content-img/image100.png");
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: center;
+            background-color: white;
+            border-start-start-radius: 4px;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+
         @include lt-sm {
-            & img {
-                margin: auto;
+            &-img {
+                margin-inline: auto;
             }
 
             &>div {
